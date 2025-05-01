@@ -479,7 +479,7 @@ export default function App() {
             <button
               onClick={rollDice}
               disabled={showQuestion || showChallenge || isMoving}
-              className="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 disabled:bg-blue-300"
+              className="w-full btn-makeup disabled:opacity-70"
             >
               Lancer le dé
             </button>
@@ -507,8 +507,7 @@ export default function App() {
                     onClick={() => handleAnswer(index)}
                     disabled={selectedAnswer !== null}
                     className={`
-                        w-full p-3 text-left rounded-lg text-gray-700
-                        transition-all duration-200
+                        w-full p-3 text-left rounded-lg transition-all duration-200
                         ${
                           selectedAnswer === null
                             ? "bg-white hover:bg-pink-50 border-2 border-gray-200 hover:border-pink-500"
