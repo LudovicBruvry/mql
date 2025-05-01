@@ -1,7 +1,6 @@
 {
-    "buildCommand": "npm run build",
-    "devCommand": "npm run dev",
-    "installCommand": "npm install",
     "framework": "vite",
-    "ignoreCommand": "echo 'Skipping type  checking'"
-  }
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
+    "installCommand": "npm install"
+}
