@@ -491,8 +491,8 @@ export default function App() {
           {/* Section Questions/Défis */}
           {showQuestion && currentQuestion && (
             <div className="bg-white rounded-xl shadow-2xl p-6">
-              <h3 className="font-bold text-pink-500 mb-4">Question :</h3>
-              <p className="text-lg mb-6 text-gray-800">
+              <h3 className="font-bold text-pink-500 text-xl mb-4">Question :</h3>
+              <p className="text-lg mb-6 font-medium text-gray-800">
                 {currentQuestion.question}
               </p>
 
@@ -503,17 +503,17 @@ export default function App() {
                     onClick={() => handleAnswer(index)}
                     disabled={selectedAnswer !== null}
                     className={`
-                        w-full p-3 text-left rounded-lg transition-all duration-200
+                        w-full p-3 text-left rounded-lg font-medium transition-all duration-200
                         ${
                           selectedAnswer === null
-                            ? "bg-white hover:bg-pink-50 border-2 border-gray-200 hover:border-pink-500"
+                            ? "bg-white text-gray-800 hover:bg-pink-50 border-2 border-gray-200 hover:border-pink-500"
                             : selectedAnswer === index
                               ? index === currentQuestion.correctAnswer
-                                ? "bg-green-100 border-2 border-green-500"
-                                : "bg-red-100 border-2 border-red-500"
+                                ? "bg-green-100 text-green-800 border-2 border-green-500"
+                                : "bg-red-100 text-red-800 border-2 border-red-500"
                               : index === currentQuestion.correctAnswer
-                                ? "bg-green-100 border-2 border-green-500"
-                                : "bg-white border-2 border-gray-200"
+                                ? "bg-green-100 text-green-800 border-2 border-green-500"
+                                : "bg-red-100 text-red-800 border-2 border-red-500"
                         }
                         disabled:cursor-not-allowed
                       `}
