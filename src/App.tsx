@@ -404,7 +404,7 @@ export default function App() {
       <div className="min-h-screen bg-gray-900 text-white p-4">
         <div className="max-w-md mx-auto bg-white rounded-xl shadow-2xl p-6">
           <h1 className="text-3xl font-bold text-center mb-6 text-pink-500">
-            Jeu de Maquillage
+            Jeu de société Makeup
           </h1>
 
           <form onSubmit={handleAddPlayer} className="space-y-4">
