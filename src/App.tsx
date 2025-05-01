@@ -451,7 +451,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-4">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-800 to-pink-600 text-white p-4 overflow-y-auto">
       {winner && <WinnerScreen winner={winner} onRestart={handleRestart} />}
 
       <div className="max-w-7xl mx-auto space-y-6">
