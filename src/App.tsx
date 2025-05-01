@@ -109,8 +109,8 @@ const BOARD_LAYOUT = createBoardLayout();
 
 const GameBoard = ({ players, currentPlayer, isMoving }) => {
   return (
-    <div className="relative w-full aspect-[8/5] bg-white rounded-xl shadow-2xl p-4">
-      <div className="grid grid-rows-5 gap-2 h-full">
+    <div className="relative w-full max-h-[60vh] overflow-auto bg-white rounded-xl shadow-2xl p-2 md:p-4">
+      <div className="grid grid-rows-5 gap-1 md:gap-2">
         {BOARD_LAYOUT.map((row, rowIndex) => (
           <div key={rowIndex} className="grid grid-cols-8 gap-2">
             {row.map((cell) => (
@@ -120,7 +120,7 @@ const GameBoard = ({ players, currentPlayer, isMoving }) => {
                   relative rounded-lg shadow-md border-2 border-gray-200
                   ${cell.color}
                   flex items-center justify-center
-                  transition-all duration-300 ease-in-out
+                  transition-all duration-300 ease-in-out h-10 md:h-14
                   ${cell.isStart ? "border-green-500 border-4" : ""}
                   ${cell.isEnd ? "border-red-500 border-4" : ""}
                 `}
@@ -454,10 +454,10 @@ export default function App() {
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-800 to-pink-600 text-white p-4 overflow-y-auto">
       {winner && <WinnerScreen winner={winner} onRestart={handleRestart} />}
 
-      <div className="max-w-7xl mx-auto space-y-6 pb-8">
+      <div className="max-w-7xl mx-auto space-y-3 md:space-y-4 pb-4 md:pb-8">
 
         {/* Plateau de jeu */}
-        <div className="bg-white p-6 rounded-xl shadow-2xl">
+        <div className="bg-white p-2 md:p-4 rounded-xl shadow-2xl">
           <GameBoard
             players={players}
             currentPlayer={currentPlayer}
@@ -465,7 +465,7 @@ export default function App() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
           {/* Section du joueur actif */}
           <div className="bg-white rounded-xl shadow-2xl p-6">
             <h2 className="text-xl font-bold mb-4 text-pink-500">
