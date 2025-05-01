@@ -228,8 +228,7 @@ const WinnerScreen = ({ winner, onRestart }) => {
             </p>
             <button
               onClick={onRestart}
-              className="bg-pink-500 text-white px-8 py-3 rounded-lg text-lg font-medium
-                hover:bg-pink-600 transform transition-all duration-300 hover:scale-105"
+              className="btn-makeup bg-pink-500 hover:bg-pink-600 transform transition-all duration-300 hover:scale-105"
             >
               Nouvelle Partie
             </button>
@@ -420,7 +419,7 @@ export default function App() {
             <button
               type="submit"
               disabled={players.length >= 4}
-              className="w-full bg-pink-500 text-white p-2 rounded-lg hover:bg-pink-600 disabled:bg-pink-300"
+              className="w-full btn-makeup bg-pink-500 hover:bg-pink-600 disabled:bg-pink-300"
             >
               Ajouter un joueur ({players.length}/4)
             </button>
@@ -441,7 +440,7 @@ export default function App() {
           {players.length >= 2 && (
             <button
               onClick={() => setGameStarted(true)}
-              className="w-full mt-6 bg-green-500 text-white p-2 rounded-lg hover:bg-green-600"
+              className="w-full mt-6 btn-makeup bg-green-500 hover:bg-green-600"
             >
               Commencer la partie
             </button>
@@ -537,13 +536,13 @@ export default function App() {
               <div className="grid grid-cols-2 gap-4">
                 <button
                   onClick={() => handleChallenge(true)}
-                  className="bg-green-500 text-white p-3 rounded-lg hover:bg-green-600"
+                  className="btn-makeup bg-green-500 hover:bg-green-600"
                 >
                   Réussi
                 </button>
                 <button
                   onClick={() => handleChallenge(false)}
-                  className="bg-red-500 text-white p-3 rounded-lg hover:bg-red-600"
+                  className="btn-makeup bg-red-500 hover:bg-red-600"
                 >
                   Raté
                 </button>
