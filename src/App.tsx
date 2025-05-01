@@ -454,10 +454,7 @@ export default function App() {
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-800 to-pink-600 text-white p-4 overflow-y-auto">
       {winner && <WinnerScreen winner={winner} onRestart={handleRestart} />}
 
-      <div className="max-w-7xl mx-auto space-y-6">
-        <h1 className="text-3xl font-bold text-center text-pink-500">
-          Jeu de Maquillage
-        </h1>
+      <div className="max-w-7xl mx-auto space-y-6 pb-8">
 
         {/* Plateau de jeu */}
         <div className="bg-white p-6 rounded-xl shadow-2xl">
