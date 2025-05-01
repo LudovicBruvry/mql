@@ -121,8 +121,8 @@ const GameBoard = ({ players, currentPlayer, isMoving }) => {
                   ${cell.color}
                   flex items-center justify-center
                   transition-all duration-300 ease-in-out h-10 md:h-14
-                  ${cell.isStart ? "border-green-500 border-4" : ""}
-                  ${cell.isEnd ? "border-red-500 border-4" : ""}
+                  ${cell.isStart ? "border-green-500 border-2" : ""}
+                  ${cell.isEnd ? "border-red-500 border-2" : ""}
                 `}
               >
                 <span className="text-gray-600 text-sm font-bold">
